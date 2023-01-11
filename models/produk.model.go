@@ -26,7 +26,7 @@ func DataProduk() (Response, error) {
 	db := config.ConnectToDB()
 	sqlStatement := "SELECT * FROM produk"
 	rows, err := db.Query(sqlStatement)
-	defer rows.Close()
+	// defer rows.Close()
 	if err != nil {
 		return res, err
 	}
